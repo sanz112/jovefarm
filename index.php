@@ -457,13 +457,15 @@ function openForm() {
                             </div>
                             <h2 class="text-center">OR</h2> 
                             <?php
+                            if(isset($_POST['submit'])) {
                               $to = "witttechnologies@gmail.com";
                               $subject = $_POST['subject'];
                               $txt = $_POST['message'];
                               $txt = $_POST['email'];
-                              $headers =$_POST['name'];
+                              $headers = $_POST['name'];
 
                               mail($to,$subject,$txt,$headers);
+                            }
                               ?>
                             <form action="" class="mt-4" method="POST">
                               <h6><strong>BEEP US A MAIL</strong></h6>
@@ -489,7 +491,7 @@ function openForm() {
                                     </div>
               
                                     <div class="form-group">
-                                      <button class="form-control btn btn-yellow btn-md mt-3" type="submit">Submit</button>
+                                      <button class="form-control btn btn-yellow btn-md mt-3" name="submit" type="submit">Submit</button>
                                     </div>
               
                                   </div>
