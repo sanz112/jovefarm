@@ -456,18 +456,9 @@ function openForm() {
                              
                             </div>
                             <h2 class="text-center">OR</h2> 
-                            <?php
-                            if(isset($_POST['submit'])) {
-                              $to = "witttechnologies@gmail.com";
-                              $subject = $_POST['subject'];
-                              $txt = $_POST['message'];
-                              $txt = $_POST['email'];
-                              $headers = $_POST['name'];
-
-                              mail($to,$subject,$txt,$headers);
-                            }
-                              ?>
-                            <form action="" class="mt-4" method="POST">
+                         
+                             
+                            <form action="jovemail.php" class="mt-4" method="POST">
                               <h6><strong>BEEP US A MAIL</strong></h6>
                                 <div class="row">
                                   <div class="col-lg">
